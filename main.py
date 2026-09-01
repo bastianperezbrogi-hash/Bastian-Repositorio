@@ -1,13 +1,15 @@
-from vehiculo import Vehiculo # Importa la clase Vehiculo desde el archivo local vehiculo.py
+from auto import Auto # Importa la clase Auto desde auto.py
+from moto import Moto # Importa la clase Moto desde moto.py
+from camion import Camion # Importa la clase Camion desde camion.py
 
-vehiculo1 = Vehiculo("AB1234", 2018) # Instancia el primer objeto Vehiculo pasándole su patente y año
-vehiculo2 = Vehiculo("CD5678", 2020) # Instancia el segundo objeto Vehiculo pasándole su patente y año
-vehiculo3 = Vehiculo("EF9012", 2023) # Instancia el tercer objeto Vehiculo pasándole su patente y año
+auto1 = Auto("AB1234", 2018) # Instancia un objeto Auto pasándole su patente y año
+moto1 = Moto("CD5678", 2020) # Instancia un objeto Moto pasándole su patente y año
+camion1 = Camion("EF9012", 2023, 5000) # Instancia un objeto Camion pasándole su patente, año y capacidad de carga en kilos
 
-print(vehiculo1.ingresar()) # Ejecuta ingresar() del primer vehículo y muestra el texto retornado en consola
-print(vehiculo2.ingresar()) # Ejecuta ingresar() del segundo vehículo y muestra el texto retornado en consola
-print(vehiculo3.ingresar()) # Ejecuta ingresar() del tercer vehículo y muestra el texto retornado en consola
+print(auto1.ingresar()) # Ejecuta ingresar() del auto y muestra el texto retornado en consola
+print(moto1.ingresar()) # Ejecuta ingresar() de la moto y muestra el texto retornado en consola
+print(camion1.ingresar()) # Ejecuta ingresar() del camión y muestra el texto retornado en consola
 
-print(f"Tarifa por hora del primer vehículo: ${vehiculo1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el primer vehículo
-print(f"Tarifa por hora del segundo vehículo: ${vehiculo2.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el segundo vehículo
-print(f"Tarifa por hora del tercer vehículo: ${vehiculo3.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el tercer vehículo
+print(f"Tarifa por hora del auto: ${auto1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el auto
+print(f"Tarifa por hora de la moto: ${moto1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por la moto
+print(f"Tarifa por hora del camión: ${camion1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el camión
