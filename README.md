@@ -33,7 +33,9 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
   - En `auto.py` (`Auto`): se reemplazó el `pass` e implementó `tarifa_hora()` retornando `25000`.
   - En `moto.py` (`Moto`): se reemplazó el `pass` e implementó `tarifa_hora()` retornando `15000`.
   - En `camion.py` (`Camion`): se implementó `tarifa_hora()` retornando `40000`.
-  - Se mantuvo intacto el método `tarifa_hora()` en la clase base `Vehiculo` (5000).
+- **Clase Base Abstracta y Métodos Abstractos (`vehiculo.py`):**
+  - Se convirtió la clase `Vehiculo` en abstracta heredando de `ABC` (`from abc import ABC, abstractmethod`).
+  - Se definió `tarifa_hora()` como método abstracto utilizando el decorador `@abstractmethod` con cuerpo en `pass` (sin retorno), obligando a las subclases a proporcionar su propia implementación.
 - **Propiedades y Validaciones en Clase Base (`vehiculo.py`):**
   - **Propiedad `patente`:**
     - Se creó el getter `@property` para acceder al atributo privado `__patente`.
@@ -45,5 +47,5 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
     - Los métodos `ingresar()` y `entregar()` continúan gestionando directamente el estado interno.
 - **Documentación y Pruebas:**
   - Se documentaron y comentaron línea por línea todos los cambios en `auto.py`, `moto.py`, `camion.py` y `vehiculo.py`.
-  - Se verificó la correcta ejecución de las validaciones y del script principal `main.py`.
+  - Se verificó la correcta ejecución de las validaciones, la imposibilidad de instanciar la clase abstracta directamente y el funcionamiento del script principal `main.py`.
 
