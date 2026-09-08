@@ -22,3 +22,27 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
   - Se importó la clase `Vehiculo` y se instanciaron 3 objetos con datos ficticios.
   - Se probó la invocación de métodos y la impresión de la tarifa por hora en consola.
 - **Documentación:** Se comentaron todas las líneas de código en ambos archivos (`vehiculo.py` y `main.py`) explicando paso a paso su funcionamiento con fines educativos.
+
+### 8 de Septiembre de 2026
+- **Clase Camion (`camion.py`):**
+  - Se implementó su propio constructor `__init__()` que recibe `patente`, `anio` y `capacidad_carga` (número entero en kilos).
+  - Invocación al constructor de la clase padre mediante `super().__init__(patente, anio)`.
+  - Se definió el atributo propio `__capacidad_carga` como privado aplicando encapsulamiento.
+  - Sobrescritura del método `tarifa_hora()` retornando un valor fijo de `40000`.
+- **Sobrescritura de Tarifas por Tipo de Vehículo (`auto.py`, `moto.py`, `camion.py`):**
+  - En `auto.py` (`Auto`): se reemplazó el `pass` e implementó `tarifa_hora()` retornando `25000`.
+  - En `moto.py` (`Moto`): se reemplazó el `pass` e implementó `tarifa_hora()` retornando `15000`.
+  - En `camion.py` (`Camion`): se implementó `tarifa_hora()` retornando `40000`.
+  - Se mantuvo intacto el método `tarifa_hora()` en la clase base `Vehiculo` (5000).
+- **Propiedades y Validaciones en Clase Base (`vehiculo.py`):**
+  - **Propiedad `patente`:**
+    - Se creó el getter `@property` para acceder al atributo privado `__patente`.
+    - Se implementó el setter `@patente.setter` con validación estricta (mínimo 6 caracteres y sin espacios); lanza un `ValueError` si no se cumplen las condiciones.
+    - Se actualizó el constructor `__init__()` para usar `self.patente = patente`, asegurando que la validación se ejecute automáticamente al instanciar cualquier vehículo o subclase.
+  - **Propiedad de solo lectura `en_taller`:**
+    - Se creó el getter `@property` para consultar el atributo privado `__en_taller`.
+    - No se implementó setter, protegiendo el atributo de modificaciones externas arbitrarias.
+    - Los métodos `ingresar()` y `entregar()` continúan gestionando directamente el estado interno.
+- **Documentación y Pruebas:**
+  - Se documentaron y comentaron línea por línea todos los cambios en `auto.py`, `moto.py`, `camion.py` y `vehiculo.py`.
+  - Se verificó la correcta ejecución de las validaciones y del script principal `main.py`.
