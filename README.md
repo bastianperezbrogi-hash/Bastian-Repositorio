@@ -23,7 +23,7 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
   - Se probó la invocación de métodos y la impresión de la tarifa por hora en consola.
 - **Documentación:** Se comentaron todas las líneas de código en ambos archivos (`vehiculo.py` y `main.py`) explicando paso a paso su funcionamiento con fines educativos.
 
-### 8 de Septiembre de 2026
+### 7 de Septiembre de 2026
 - **Clase Camion (`camion.py`):**
   - Se implementó su propio constructor `__init__()` que recibe `patente`, `anio` y `capacidad_carga` (número entero en kilos).
   - Invocación al constructor de la clase padre mediante `super().__init__(patente, anio)`.
@@ -46,3 +46,4 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
 - **Documentación y Pruebas:**
   - Se documentaron y comentaron línea por línea todos los cambios en `auto.py`, `moto.py`, `camion.py` y `vehiculo.py`.
   - Se verificó la correcta ejecución de las validaciones y del script principal `main.py`.
+
