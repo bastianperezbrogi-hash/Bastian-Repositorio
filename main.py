@@ -13,3 +13,9 @@ print(camion1.ingresar()) # Ejecuta ingresar() del camión y muestra el texto re
 print(f"Tarifa por hora del auto: ${auto1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el auto
 print(f"Tarifa por hora de la moto: ${moto1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por la moto
 print(f"Tarifa por hora del camión: ${camion1.tarifa_hora()}") # Concatena e imprime la tarifa retornada por el camión
+
+# Demostración de manejo seguro de excepciones al crear objetos (POO Seguro)
+try: # Bloque protegido para intentar instanciar un vehículo con datos potencialmente erróneos
+    auto_invalido = Auto("A 1", 2022) # Intento de crear un vehículo con patente inválida (longitud menor a 6 y con espacio)
+except ValueError as error: # Captura específicamente la excepción de validación lanzada por el setter de patente
+    print(f"Registro rechazado de forma segura: {error}") # Muestra el mensaje de error controlado sin detener la ejecución del programa

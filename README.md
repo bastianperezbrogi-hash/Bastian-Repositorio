@@ -45,7 +45,10 @@ Repositorio para la asignatura de Programación Orientada a Objetos Seguro.
     - Se creó el getter `@property` para consultar el atributo privado `__en_taller`.
     - No se implementó setter, protegiendo el atributo de modificaciones externas arbitrarias.
     - Los métodos `ingresar()` y `entregar()` continúan gestionando directamente el estado interno.
+- **Manejo Seguro de Excepciones con Try/Except (`main.py`):**
+  - Se incorporó un bloque `try / except ValueError` en el script cliente para gestionar de forma segura los intentos de instanciación con datos no válidos (por ejemplo, una patente con espacios o menor a 6 caracteres).
+  - **Justificación de diseño:** Siguiendo el principio de POO Seguro y separación de responsabilidades, la clase `Vehiculo` es responsable de hacer cumplir las reglas de negocio lanzando excepciones (`raise ValueError`) ante datos inválidos, mientras que la capa de ejecución (`main.py`) es la encargada de capturar (`except`) y manejar el error de manera controlada para el usuario, impidiendo la interrupción abrupta del sistema.
 - **Documentación y Pruebas:**
-  - Se documentaron y comentaron línea por línea todos los cambios en `auto.py`, `moto.py`, `camion.py` y `vehiculo.py`.
-  - Se verificó la correcta ejecución de las validaciones, la imposibilidad de instanciar la clase abstracta directamente y el funcionamiento del script principal `main.py`.
+  - Se documentaron y comentaron línea por línea todos los cambios en `auto.py`, `moto.py`, `camion.py`, `vehiculo.py` y `main.py`.
+  - Se verificó la correcta ejecución de las validaciones, la captura controlada de excepciones con `try/except`, la restricción de instanciación de clases abstractas y la salida por consola del script principal.
 
